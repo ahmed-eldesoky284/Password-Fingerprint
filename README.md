@@ -37,7 +37,7 @@ To replicate or modify this project, you will need the following components:
 
 4. Open the Arduino IDE (Integrated Development Environment) on your computer.
 
-5. In the Arduino IDE, go to **File** > **Open** and navigate to the cloned repository folder. Open the `access_control.ino` file.
+5. In the Arduino IDE, go to **File** > **Open** and navigate to the cloned repository folder. Open the `Password-Fingerprint.ino` file.
 
 6. Make sure you have the required libraries installed. If not, install them by going to **Sketch** > **Include Library** > **Manage Libraries** and search for the following libraries:
 
@@ -54,7 +54,7 @@ To replicate or modify this project, you will need the following components:
 
 1. Power up the Arduino board using a 5V power supply.
 
-2. The system will prompt you to enter the password using the keypad. The default password is `1234`, but you can modify it in the code.
+2. The system will prompt you to enter the password using the keypad. The default password is `1345`, but you can modify it in the code.
 
 3. After entering the password, the system will prompt you to place your finger on the fingerprint sensor.
 
@@ -64,7 +64,7 @@ To replicate or modify this project, you will need the following components:
 
 ## Customization
 
-You can customize the access control logic and actions according to your requirements. In the `access_control.ino` file, you will find comments and instructions to guide you through the customization process.
+You can customize the access control logic and actions according to your requirements. In the `Password-Fingerprint.ino` file, you will find comments and instructions to guide you through the customization process.
 
 Some possible customizations include:
 
