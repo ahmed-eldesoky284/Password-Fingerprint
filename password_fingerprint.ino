@@ -38,10 +38,17 @@ void setup() {
 }
 
 void loop() {
+  void keypad();}
+
+
+
+void keypad(){
   myk=mypad.getKey();
   while(!myk)myk=mypad.getKey();
   lcd.print("*");
-  if(myk=='D'){
+  if(myk=='C'){
+     reslcd();}
+  else if(myk=='D'){
     Serial.println(counter);
     lcd.clear();  
     lcd.home();
@@ -58,8 +65,6 @@ void loop() {
   digitalWrite(10,1);
   delay(3000);
   digitalWrite(10,0);
-  reslcd();
-  id_button();
   }
   else {
     
@@ -68,8 +73,6 @@ void loop() {
   lcd.home();
   lcd.print("Wrong password");
   delay(2000);
-  id_button();
-  reslcd();
   }
   }
   else
@@ -77,11 +80,9 @@ void loop() {
  counter=(counter>=3)?-1:counter;
  counter++; 
 }
+
 void id_button() {
-  bool l = false;
-  lcd.clear();
-  lcd.print("Enter you finger");
-  delay(2000);
+  
   buttonstate=0xFF;
   for(c=0;buttonstate==0xFF;c++){
   buttonstate=(!digitalRead(ID[c]))?c:0xFF;
@@ -92,16 +93,20 @@ void id_button() {
     lcd.clear();
     lcd.home();
     lcd.print("Enter you finger");
+    
+    
     delay(2000);
     buttonstate=0xFF;
   }
-  else{
+  else {
     lcd.clear();
+    lcd.home();
     lcd.print("The ID is : "+String(c));
-      delay(2000);
+     delay(2000);
     reslcd();
     buttonstate=0xFF;
+    
   }
-    
-    }    
-    
+ }
+
+
