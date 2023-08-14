@@ -41,7 +41,6 @@ void loop() {
   void keypad();}
 
 
-
 void keypad(){
   myk=mypad.getKey();
   while(!myk)myk=mypad.getKey();
